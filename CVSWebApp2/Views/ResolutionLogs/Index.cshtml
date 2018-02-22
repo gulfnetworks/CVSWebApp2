@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CVSWebApp2.Models.ResolutionLog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Resolution Log</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table-responsive">
+<table class="table table-hover table-condensed  table-striped">
+    <thead>
+        <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdaterId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResolutionDetails)
+        </th>
+
+        <th>
+        @Html.DisplayNameFor(model => model.ApplicationUser)
+        </th>
+        <th>
+        @Html.DisplayNameFor(model => model.Survey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td >
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.UpdaterId)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.ResolutionDetails)
+            </td>
+
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.ApplicationUser.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Survey.SurveyId)
+            </td>
+                        <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ResolutionLogId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ResolutionLogId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ResolutionLogId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

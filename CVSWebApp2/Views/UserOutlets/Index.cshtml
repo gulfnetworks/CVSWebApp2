@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CVSWebApp2.Models.UserOutlet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Outlet Members</h2>
+
+<p>
+    <a asp-action="Create">Assign New</a>
+</p>
+    <div class="table-responsive">
+    <table class="table table-hover table-condensed  table-striped">
+    <thead>
+        <tr>
+            <th class="text-capitalize">
+                @Html.DisplayNameFor(model => model.Outlet.OutletName)
+            </th>
+            <th class="text-capitalize">
+                @Html.DisplayNameFor(model => model.ApplicationUser.FullName)
+            </th>
+            <th >
+                @Html.DisplayNameFor(model => model.DefaultOutlet)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.Outlet.OutletName)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.ApplicationUser.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultOutlet)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UserOutletId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserOutletId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserOutletId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

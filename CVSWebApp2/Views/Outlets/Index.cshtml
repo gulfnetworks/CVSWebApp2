@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CVSWebApp2.Models.Outlet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Outlets</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+   <div class="table-responsive">
+                      <table class="table table-hover table-condensed  table-striped">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutletName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutletAddress)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.OutletName)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.OutletAddress)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.Company.CompanyName)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.Country.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OutletId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OutletId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OutletId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+       </div>

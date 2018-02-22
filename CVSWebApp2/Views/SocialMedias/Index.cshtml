@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CVSWebApp2.Models.SocialMedia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Social Media Settings</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table-responsive">
+<table class="table table-hover table-condensed  table-striped">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Url)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JSONSettings)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Active)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JSONSettings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.CompanyId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SocialMediaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SocialMediaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SocialMediaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    </div>

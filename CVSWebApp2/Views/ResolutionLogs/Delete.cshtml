@@ -1,0 +1,57 @@
+﻿@model CVSWebApp2.Models.ResolutionLog
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ResolutionLog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdaterId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdaterId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResolutionDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResolutionDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Survey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Survey.SurveyId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ResolutionLogId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

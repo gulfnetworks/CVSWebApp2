@@ -1,0 +1,107 @@
+@using Microsoft.AspNetCore.Identity
+@using CVSWebApp2.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@*@if (SignInManager.IsSignedIn(User))
+    {
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+                </li>
+            </ul>
+        </form>
+    }
+    else
+    {
+        <ul class="nav navbar-nav navbar-right">
+            <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+            <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+        </ul>
+    }*@
+
+
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    @*<form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+                </li>
+            </ul>
+        </form>*@
+
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+  
+        <div class="dropdown pull-right">
+            <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+             
+             @UserManager.GetUserName(User)
+           <i class="fa fa-gears" style="color:White;font-size:20px;vertical-align:middle;margin-left:3px;font-weight:100"> </i>
+    
+            </button>
+            <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+                <a href="#" class="dropdown-item"><i class="pg-settings_small"></i> Settings</a>
+                <a href="#" class="dropdown-item"><i class="pg-outdent"></i> Feedback</a>
+                <a href="#" class="dropdown-item"><i class="pg-signals"></i> Help</a>
+                <a href="#" id="btnLogout"  class="clearfix bg-master-lighter dropdown-item">
+                    <span class="pull-left">Logout</span>
+                    <span class="pull-right"><i class="pg-power"></i></span>
+                </a>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+              <!-- START User Info-->
+    <div class="pull-left p-r-10 fs-14 font-heading hidden-md-down text-white">
+       <a asp-area="" class="btn btn-link navbar-btn navbar-link" asp-controller="Account" asp-action="Login" class="loginButton" style="color:white;vertical-align:middle">
+             Login  
+           <i class="fa fa-sign-in" style="color:White;font-size:20px;vertical-align:middle;margin-left:3px"> </i>
+            </a>   
+    </div>
+
+          <!-- END User Info-->
+
+
+    @*<div class="pull-left p-r-10 fs-14 font-heading hidden-md-down text-white">
+        <span class="semi-bold">
+          
+            <a asp-area="" class="btn btn-link navbar-btn navbar-link" asp-controller="Account" asp-action="Login" class="loginButton" style="color:white">
+             Login  
+
+            </a>
+        </span>
+    </div>*@
+
+    @*<div class="dropdown pull-right">
+        <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="thumbnail-wrapper d32 circular inline sm-m-r-5">
+              Login   <img src="~/assets/img/profiles/avatar.jpg" alt="" data-src="~/assets/img/profiles/avatar.jpg" data-src-retina="~/assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+            </span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+            <a href="#" class="dropdown-item"><i class="pg-settings_small"></i> Settings</a>
+            <a href="#" class="dropdown-item"><i class="pg-outdent"></i> Feedback</a>
+            <a asp-area="" asp-controller="Account" asp-action="Register" class="dropdown-item"><i class="pg-signals"></i> Help</a>
+            <a href="#" class="clearfix bg-master-lighter dropdown-item">
+                <span class="pull-left">Login</span>
+                <span class="pull-right"><i class="pg-power"></i></span>
+            </a>
+        </div>
+    </div>*@
+
+
+
+}
+

@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "Complete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12 text-center center-div-v">
+            <div class="center-div">
+                      <h4 class=" p-t-10 inline">Thank you for your feedback. Like And Share Us on</h4>
+                    <div id="share" ></div>
+            </div>
+       
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section Styles{ 
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-plain.css" />
+    <style>
+        #share {
+            font-size:30px;
+        }
+
+        .jssocials-share-link {
+            border-radius: 0;
+            border: none !important;
+        }
+        .jssocials-share{
+            margin: 0px 0px 0px 0px !important;
+        }
+        .center-div{
+            margin: 0 auto;
+            float: none;
+            display: block;
+        }
+
+        .center-div-v{
+            min-height: 100%;
+            min-height: 60vh;
+
+            display: flex;
+            align-items: center;
+
+        }
+    </style>
+}
+
+@section Scripts{ 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+ 
+
+    <script src="jquery.js"></script>
+    <script src="jssocials.min.js"></script>
+    <script>
+        $("#share").jsSocials({
+            showLabel: false,
+            showCount: false,
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+        });
+
+
+    </script>
+}

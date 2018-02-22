@@ -1,0 +1,1212 @@
+﻿@*@model CVSWebApp2.Models.Survey
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Survey</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="QualityRate" class="control-label"></label>
+                <input asp-for="QualityRate" class="form-control" />
+                <span asp-validation-for="QualityRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QualityComment" class="control-label"></label>
+                <input asp-for="QualityComment" class="form-control" />
+                <span asp-validation-for="QualityComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueRate" class="control-label"></label>
+                <input asp-for="ValueRate" class="form-control" />
+                <span asp-validation-for="ValueRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueComment" class="control-label"></label>
+                <input asp-for="ValueComment" class="form-control" />
+                <span asp-validation-for="ValueComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRate" class="control-label"></label>
+                <input asp-for="ServiceRate" class="form-control" />
+                <span asp-validation-for="ServiceRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceComment" class="control-label"></label>
+                <input asp-for="ServiceComment" class="form-control" />
+                <span asp-validation-for="ServiceComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmbienceRate" class="control-label"></label>
+                <input asp-for="AmbienceRate" class="form-control" />
+                <span asp-validation-for="AmbienceRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmbienceComment" class="control-label"></label>
+                <input asp-for="AmbienceComment" class="form-control" />
+                <span asp-validation-for="AmbienceComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendRate" class="control-label"></label>
+                <input asp-for="RecommendRate" class="form-control" />
+                <span asp-validation-for="RecommendRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendPoorArea" class="control-label"></label>
+                <input asp-for="RecommendPoorArea" class="form-control" />
+                <span asp-validation-for="RecommendPoorArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendImprovements" class="control-label"></label>
+                <input asp-for="RecommendImprovements" class="form-control" />
+                <span asp-validation-for="RecommendImprovements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendSuggestions" class="control-label"></label>
+                <input asp-for="RecommendSuggestions" class="form-control" />
+                <span asp-validation-for="RecommendSuggestions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastVisit" class="control-label"></label>
+                <input asp-for="LastVisit" class="form-control" />
+                <span asp-validation-for="LastVisit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastVisitComment" class="control-label"></label>
+                <input asp-for="LastVisitComment" class="form-control" />
+                <span asp-validation-for="LastVisitComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Action" class="control-label"></label>
+                <input asp-for="Action" class="form-control" />
+                <span asp-validation-for="Action" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateTime" class="control-label"></label>
+                <input asp-for="DateTime" class="form-control" />
+                <span asp-validation-for="DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer" class="control-label"></label>
+                <input asp-for="Customer" class="form-control" />
+                <span asp-validation-for="Customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MobileNo" class="control-label"></label>
+                <input asp-for="MobileNo" class="form-control" />
+                <span asp-validation-for="MobileNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CheckNo" class="control-label"></label>
+                <input asp-for="CheckNo" class="form-control" />
+                <span asp-validation-for="CheckNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TableNo" class="control-label"></label>
+                <input asp-for="TableNo" class="form-control" />
+                <span asp-validation-for="TableNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutletId" class="control-label"></label>
+                <select asp-for="OutletId" class ="form-control" asp-items="ViewBag.OutletId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManagerId" class="control-label"></label>
+                <select asp-for="ManagerId" class ="form-control" asp-items="ViewBag.ManagerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="StaffId" class="control-label"></label>
+                <select asp-for="StaffId" class ="form-control" asp-items="ViewBag.StaffId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@
+
+
+@model CVSWebApp2.Models.Survey
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var CompanyName = ((Company)ViewData["Company"]).CompanyName.ToProperCase();
+    var CompanyId = ((Company)ViewData["Company"]).CompanyId;
+}
+
+<br />
+
+<h4>General Survey</h4>
+<br />
+<div  id="containerdiv" class="row wrapper scroll-scrolly_visible" style=" height: 100% !important;" >
+    @*<div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="QualityRate" class="control-label"></label>
+                <input asp-for="QualityRate" class="form-control" />
+                <span asp-validation-for="QualityRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QualityComment" class="control-label"></label>
+                <input asp-for="QualityComment" class="form-control" />
+                <span asp-validation-for="QualityComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueRate" class="control-label"></label>
+                <input asp-for="ValueRate" class="form-control" />
+                <span asp-validation-for="ValueRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueComment" class="control-label"></label>
+                <input asp-for="ValueComment" class="form-control" />
+                <span asp-validation-for="ValueComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRate" class="control-label"></label>
+                <input asp-for="ServiceRate" class="form-control" />
+                <span asp-validation-for="ServiceRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceComment" class="control-label"></label>
+                <input asp-for="ServiceComment" class="form-control" />
+                <span asp-validation-for="ServiceComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmbienceRate" class="control-label"></label>
+                <input asp-for="AmbienceRate" class="form-control" />
+                <span asp-validation-for="AmbienceRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmbienceComment" class="control-label"></label>
+                <input asp-for="AmbienceComment" class="form-control" />
+                <span asp-validation-for="AmbienceComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendRate" class="control-label"></label>
+                <input asp-for="RecommendRate" class="form-control" />
+                <span asp-validation-for="RecommendRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendPoorArea" class="control-label"></label>
+                <input asp-for="RecommendPoorArea" class="form-control" />
+                <span asp-validation-for="RecommendPoorArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendImprovements" class="control-label"></label>
+                <input asp-for="RecommendImprovements" class="form-control" />
+                <span asp-validation-for="RecommendImprovements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecommendSuggestions" class="control-label"></label>
+                <input asp-for="RecommendSuggestions" class="form-control" />
+                <span asp-validation-for="RecommendSuggestions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastVisit" class="control-label"></label>
+                <input asp-for="LastVisit" class="form-control" />
+                <span asp-validation-for="LastVisit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastVisitComment" class="control-label"></label>
+                <input asp-for="LastVisitComment" class="form-control" />
+                <span asp-validation-for="LastVisitComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Action" class="control-label"></label>
+                <input asp-for="Action" class="form-control" />
+                <span asp-validation-for="Action" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateTime" class="control-label"></label>
+                <input asp-for="DateTime" class="form-control" />
+                <span asp-validation-for="DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer" class="control-label"></label>
+                <input asp-for="Customer" class="form-control" />
+                <span asp-validation-for="Customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MobileNo" class="control-label"></label>
+                <input asp-for="MobileNo" class="form-control" />
+                <span asp-validation-for="MobileNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CheckNo" class="control-label"></label>
+                <input asp-for="CheckNo" class="form-control" />
+                <span asp-validation-for="CheckNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TableNo" class="control-label"></label>
+                <input asp-for="TableNo" class="form-control" />
+                <span asp-validation-for="TableNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OutletId" class="control-label"></label>
+                <select asp-for="OutletId" class ="form-control" asp-items="ViewBag.OutletId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManagerId" class="control-label"></label>
+                <select asp-for="ManagerId" class ="form-control" asp-items="ViewBag.ManagerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="StaffId" class="control-label"></label>
+                <select asp-for="StaffId" class ="form-control" asp-items="ViewBag.StaffId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>*@
+
+
+    
+    @*<-------------------- NEW CODE HERE -------------------->*@
+
+
+
+        <form class="form" action="" id="formSurvey">
+            <div class="field">
+
+                <div class="form-group">
+
+
+                    <br class="spacer"/>
+                    <h5 class="question-header">Q1. Value</h5>
+                    <span class="lbl-header-comment">Please rate our value on a scale of 1(poor) to 10(Excellent) *</span>
+
+                    <div class="btn-toolbar"
+                         id="q1BtnToolbar"
+                            role="toolbar">
+
+                        <div class="btn-group btn-group-lg">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                            <button type="button" class="btn btn-default">7</button>
+                            <button type="button" class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default">9</button>
+                            <button type="button" class="btn btn-default">10</button>
+                        </div>
+                    </div>
+                </div>
+                 <br class="spacer"/>
+
+                <label class="lblComment" visible-from="1" visible-to="7">We are so sorry, please let us know how we can offer a better value for your next visit? </label>
+                <label class="lblComment" visible-from="8" visible-to="10">We are glad that you appreciate our great value. Please tell us what you think is the best value.</label>
+                <textarea visible-from="1" visible-to="10" rows="2" id="ValueComment"></textarea>
+            </div>
+
+            <div class="field">
+
+                <div class="form-group">
+                      <br class="spacer"/>
+
+
+
+                    <h5 class="question-header">Q2. Quality</h5>
+                    <span class="lbl-header-comment">Please rate our quality on a scale of 1(poor) to 10(Excellent) *</span>
+
+                    @*<div class="btn-toolbar red-tooltip"  data-container="body" role="toolbar"  data-toggle="popover" data-placement="bottom"
+                        title="" data-original-title="Please fill this in">*@
+
+                    <div class="btn-toolbar"
+                            id="q2BtnToolbar"
+                            role="toolbar"
+                            data-animation="false"
+                            data-container='#formSurvey'
+                            data-toggle="popover"
+                            data-placement="bottom"
+                            data-content="Please fill this in"
+                            title="" data-original-title="">
+
+
+
+
+                        <div class="btn-group btn-group-lg">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                            <button type="button" class="btn btn-default">7</button>
+                            <button type="button" class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default">9</button>
+                            <button type="button" class="btn btn-default">10</button>
+                        </div>
+                    </div>
+                </div>
+                 <br class="spacer"/>
+
+                <label class="lblComment" visible-from="1" visible-to="7">We are sorry to disappoint you. Please let us know how we can improve the quality of our items for your next visit.</label>
+                <label class="lblComment" visible-from="8" visible-to="10">We are glad that you enjoyed quality dining at our outlet. Please tell us which quality impressed you the most?</label>
+                <textarea visible-from="1" visible-to="10" rows="2" id="QualityComment"></textarea>
+
+
+
+            </div>
+            <div class="field">
+
+                <div class="form-group">
+                       <br class="spacer"/>
+
+
+
+                    <h5 class="question-header">Q3. Service</h5><br/>
+                    <span class="lbl-header-comment">Please rate our service on a scale of 1(poor) to 10(Excellent) *</span>
+
+                    <div class="btn-toolbar"
+                            id="q3BtnToolbar"
+                            role="toolbar"
+                            data-animation="false"
+                            data-container='#formSurvey'
+                            data-toggle="popover"
+                            data-placement="left"
+                            data-content="Please fill this in"
+                            title="" data-original-title="">
+
+
+
+                        <div class="btn-group btn-group-lg">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                            <button type="button" class="btn btn-default">7</button>
+                            <button type="button" class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default">9</button>
+                            <button type="button" class="btn btn-default">10</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br class="spacer"/>
+                <label class="lblComment" visible-from="1" visible-to="7">We are so sorry to disappoint you. Please let us know what went wrong and how we can serve you better on your next visit.  </label>
+                <label class="lblComment" visible-from="8" visible-to="10">We are so glad to have made your day. Please let us know what you like most about our service? </label>
+                <textarea visible-from="1" visible-to="10" rows="2" id="ServiceComment"></textarea>
+            </div>
+
+            <div class="field">
+
+                <div class="form-group">
+                     <br class="spacer"/>
+
+
+
+                    <h5 class="question-header">Q4. Ambience</h5><br/>
+                    <span class="lbl-header-comment">Please rate our ambience on a scale of 1(poor) to 10(Excellent) *</span>
+
+                    <div class="btn-toolbar"
+                            id="q4BtnToolbar"
+                            role="toolbar"
+                            data-animation="false"
+                            data-container='#formSurvey'
+                            data-toggle="popover"
+                            data-placement="bottom"
+                            data-content="Please fill this in"
+                            title="" data-original-title="">
+
+                        <div class="btn-group btn-group-lg">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                            <button type="button" class="btn btn-default">7</button>
+                            <button type="button" class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default">9</button>
+                            <button type="button" class="btn btn-default">10</button>
+                        </div>
+                    </div>
+                </div>
+                 <br class="spacer"/>
+
+
+                <label class="lblComment" visible-from="1" visible-to="7">We are so sorry that you are disappointed with the ambience of our outlet. Please let us know how we can correct the ambience and not repeat the mistake on your next visit.  </label>
+                <label class="lblComment" visible-from="8" visible-to="10">We are glad to have made your day. Please let us know what you like about the ambience? </label>
+                <textarea visible-from="1" visible-to="10" rows="2" id="AmbienceComment"></textarea>
+            </div>
+            <div class="field">
+
+                <div class="form-group">
+                        <br class="spacer"/>
+
+
+
+                    <h5 class="question-header">Q5. Your most recent visit</h5>
+
+                    <span class="lbl-header-comment">When was your last visit to our restaurant? (*)</span>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8 col-lg-8" id="btnLastVisit">
+                            <div class="btn btn-lg btn-default btn-cons" btn-type="select">
+                                <span class="badge btn-badge">A</span>
+                                <span>Never</span>
+                                <i class="fa fa-check" style="margin-left:5px;"></i>
+                            </div>
+
+                    
+                             <div class="btn btn-default btn-lg btn-cons" btn-type="select">
+                                <span class="badge btn-badge">B</span>
+                                <span>1 Month</span>
+                                <i class="fa fa-check " style="margin-left:5px;"></i>
+                            </div>
+
+                           <div class="btn btn-default btn-lg btn-cons" btn-type="select">
+                                <span class="badge btn-badge">C</span>
+                                <span>3 Months</span>
+                                <i class="fa fa-check" style="margin-left:5px;"></i>
+                            </div>
+
+
+
+                            <div class="btn btn-default btn-lg btn-cons" btn-type="select">
+                                <span class="badge btn-badge">D</span>
+                                <span>6 Months</span>
+                                <i class="fa fa-check" style="margin-left:5px;"></i>
+                            </div>
+                             <div class="btn btn-default btn-lg btn-cons" btn-type="select">
+                                <span class="badge btn-badge">E</span>
+                                <span>> 6 Months </span>
+                                <i class="fa fa-check" style="margin-left:5px;"></i>
+                            </div>
+
+                      
+                        </div>
+               
+                    </div>
+
+                </div>
+
+                <br />
+
+            </div>
+
+            <div class="field last-field">
+
+                <div class="form-group">
+                    <br class="spacer"/>
+
+
+
+                    <h5 class="question-header">Q6. Recommend</h5><br/>
+                    <span class="lbl-header-comment">On a scale of 1 (least likely) to 10 (most likely), would you recommend us to your friends? (*)</span>
+
+                    <div class="btn-toolbar"
+                            id="q6BtnToolbar"
+                            role="toolbar"
+                            data-animation="false"
+                            data-container='#formSurvey'
+                            data-toggle="popover"
+                            data-placement="bottom"
+                            data-content="Please fill this in"
+                            title="" data-original-title="">
+
+                        <div class="btn-group btn-group-lg">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                            <button type="button" class="btn btn-default">5</button>
+                            <button type="button" class="btn btn-default">6</button>
+                            <button type="button" class="btn btn-default">7</button>
+                            <button type="button" class="btn btn-default">8</button>
+                            <button type="button" class="btn btn-default">9</button>
+                            <button type="button" class="btn btn-default">10</button>
+                        </div>
+                    </div>
+                </div>
+                <br class="spacer"/>
+
+                <label class="lblComment" visible-from="1" visible-to="7">Are there any areas that did not meet your expectations? </label>
+                <textarea visible-from="1" visible-to="7" rows="2" id="RecommendPoorArea"></textarea>
+
+                <br class="lblComment" visible-from="1" visible-to="7" />
+                <label class="lblComment" visible-from="1" visible-to="7">How can we improve to better serve you for your next visit? </label>
+                <textarea visible-from="1" visible-to="7" rows="2" id="RecommendImprovements"></textarea>
+
+
+
+                <label class="lblComment" visible-from="8" visible-to="10">Are there any suggestions for us to serve you better? </label>
+                <textarea visible-from="8" visible-to="10" rows="2" id="RecommendSuggestions"></textarea>
+            </div>
+
+
+        </form>
+
+
+
+</div>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+
+
+  
+
+
+
+
+
+
+     <div class="modal slide-up disable-scroll" id="modalVisitDetail" tabindex="-1" role="dialog" aria-hidden="false"  style="top: 10% !important;">
+            <div class="modal-dialog" >
+              <div class="modal-content-wrapper">
+                <div class="modal-content">
+                  <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i>
+                    </button>
+                    <h5> <span id="lblModalHeader">Visit</span> <span class="semi-bold" id="lblModalHeaderBold">Details</span></h5>
+                    <p class="p-b-10" id="lblModalHeaderSubtext"></p>
+                  </div>
+                  <div class="modal-body">
+
+                      <div class="row">
+                         <form class="col-md-12 frmClientDetails" role="form" >
+                        
+                          <div class="col-md-12">
+                             <div class="row">
+                                  <div class="col-md-12" id="divVisitDetail" >
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-default form-group-default-select2 required">
+                                                <label>Country</label>
+                                                <select id="CountryId" data-placeholder="Select Country" class ="form-control full-width" data-init-plugin="select2" asp-items="ViewBag.CountryId">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" id="divOutletContainer">
+                                             <div class="form-group form-group-default form-group-default-select2 required">
+                                                <label class="">Outlet</label>
+                                                    <select id="OutletId" data-placeholder="Select Outlet" class="form-control full-width" data-init-plugin="select2" >
+                                                    </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                      <div id="divUsersByOutletContainer">
+                                          <div class="form-group form-group-default form-group-default-select2 required">
+                                                <label class="">Manager</label>
+                                                <select id="ManagerId" class="form-control full-width" data-placeholder="Select Manager" data-init-plugin="select2">
+ 
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group form-group-default form-group-default-select2 required">
+                                                <label class="">Staff</label>
+                                                <select id="StaffId" class="full-width" data-placeholder="Select Staff" data-init-plugin="select2">
+                                                </select>
+                                            </div>
+                                      </div>
+
+                         
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-default required">
+                                                <label>TABLE NO</label>
+                                                <input id="txtTableNo" type="text" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group  form-group-default required">
+                                                <label>Check No</label>
+                                                <input id="txtCheckNo" type="text" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                             
+                          <br />
+                             @*<div class="col-md-12">
+      
+              
+                                    <div class="radio radio-success inline">
+    
+                                        <input id="slideup_small" name="slideup_toggler" type="radio" value="mini" selected>
+                                        <label for="slideup_small">Small</label>
+                                    </div>
+                                    <button class="btn btn-green btn-lg pull-right bottom-right" id="btnToggleSlideUpSize">Generate</button>
+                              
+
+                             </div>*@
+                             
+                           
+                              <div class="col-md-12">
+            
+
+                                  <button type="button" class="btn btn-primary pull-right" id="btnNext" >Next</button>
+                                    <button type="button" class="btn pull-right" style="margin-right:5px;" id="btnCancel">Cancel</button>
+                        
+                              </div>
+                           
+                              </form>
+
+                      </div>
+          
+             
+      
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+     
+
+   <div class="modal slide-up disable-scroll" id="modalClientDetails" tabindex="-1" role="dialog" aria-hidden="false"  style="top: 10% !important;">
+            <div class="modal-dialog" >
+              <div class="modal-content-wrapper">
+                <div class="modal-content">
+                  <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i>
+                    </button>
+                    <h5> <span id="lblModalHeader">Customer</span> <span class="semi-bold" id="lblModalHeaderBold">Information</span></h5>
+                    <p class="p-b-10" id="lblModalHeaderSubtext"></p>
+                  </div>
+                  <div class="modal-body">
+
+                      <div class="row">
+                         <form class="col-md-12 frmClientDetails" role="form" >
+                        
+                          <div class="col-md-12">
+                             <div class="row">
+           
+                                  <div class="col-md-12" id="divCustomerInfo" >
+
+                                  <div class="row ">
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-default required">
+                                                <label>First name</label>
+                                                <input id="txtFirstName" type="text" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-default">
+                                                <label>Last name</label>
+                                                <input id="txtLastName" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row user-info-div">
+                                    <div class="form-group  form-group-default required">
+                                        <label>Email</label>
+                                        <input id="txtEmail"  type="email" class="form-control" placeholder="ex: some@@example.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <br />
+                                        <input type="checkbox" data-init-plugin="switchery" data-size="small" data-color="primary" checked="checked" />     <label>
+                                            SUBSCRIBE EMAIL TO NEWS AND DEALS.
+                                        </label>
+                                    </div>
+                                    <div class="form-group form-group-default required">
+                                        <label>Mobile</label>
+                                        <input id="txtMobile" type="text" class="form-control" required>
+                                    </div>
+
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                             
+                          <br />
+                             @*<div class="col-md-12">
+      
+              
+                                    <div class="radio radio-success inline">
+    
+                                        <input id="slideup_small" name="slideup_toggler" type="radio" value="mini" selected>
+                                        <label for="slideup_small">Small</label>
+                                    </div>
+                                    <button class="btn btn-green btn-lg pull-right bottom-right" id="btnToggleSlideUpSize">Generate</button>
+                              
+
+                             </div>*@
+                             
+                           
+                              <div class="col-md-12 btnPopUpContainer">
+            
+
+                                  <button type="button" class="btn btn-primary pull-right" id="btnSubmit" >Submit</button>
+                                    <button type="button" class="btn pull-right" style="margin-right:5px;" id="btnBack">Back</button>
+                        
+                              </div>
+                           
+                              </form>
+
+                      </div>
+          
+             
+      
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+     
+
+
+  <div class="modal fade slide-up disable-scroll" id="modalLoader" tabindex="-1" role="dialog" aria-hidden="false">
+            <div class="modal-dialog modal-sm" >
+              <div class="modal-content-wrapper">
+                <div class="modal-content">
+                         <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i>
+                    </button>
+
+                  </div>
+                  <div class="modal-body text-center m-t-20">
+
+                   <!-- START card -->
+                    <div class="row">
+                      <div class="col-md-12 text-center" id="prgSaving" >
+                        <div class="progress-circle-indeterminate m-t-45">
+                        </div>
+                        <br>
+                        <p class="large hint-text">Saving...</p>
+                      </div>
+       
+                      <div class="col-md-12 text-center" id="prgSaved">
+                      
+               
+                        
+                           <h3 class="fa fa-check text-success" style="font-size:50px !important;"  > </h3>
+                    
+                        <br>
+                        <p class="large hint-text">Successfully Saved!</p>
+                      </div>
+
+
+                       <div class="col-md-12 text-center" id="prgFailed">
+                      
+               
+                        
+                         <h1 class="fa fa-times" style="font-size:50px !important; color:  lightgray !important"  > </h1>
+                    
+                        <br>
+                        <p class="large hint-text">Saving Failed!</p>
+                      </div>
+                    </div>
+                <!-- END card -->
+                  
+          
+             
+      
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+
+
+
+        <div class="modal slide-up disable-scroll" id="modalSlideUpSmall" tabindex="-1" role="dialog" aria-hidden="false" style="top: 20% !important;">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content-wrapper">
+                <div class="modal-content">
+                  <div class="modal-body text-center m-t-20">
+                    @*<h4 class="no-margin p-b-10">  We welcome your feedback!
+                            </h4><p> Please fill in the following. (* indicates required response)</p>*@
+
+                        <h4> Thank You for Visiting  @(CompanyName) </h4>
+                            <p>We hope you had a good time! Your dining experience is valuable to us. Share your experience with us! No thought is too fishy for us.</p>
+                    <button type="button" class="btn btn-primary btn-cons" data-dismiss="modal" id="btnModalSmallContinue">Send Survey</button>
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+          </div>
+
+      <div class="modal slide-up disable-scroll" id="modalIntroSmall" tabindex="-1" role="dialog" aria-hidden="false" style="top: 20% !important;">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content-wrapper">
+                <div class="modal-content">
+                  <div class="modal-body text-center m-t-20">
+                    <h4 class="no-margin p-b-10  text-n">  We welcome your feedback!
+                            </h4><p> Please fill in the following.<br />(* indicates required response)</p>
+                    <button type="button" class="btn btn-primary btn-cons" data-dismiss="modal" id="btnModalIntroContinue">Continue</button>
+                  </div>
+                </div>
+              </div>
+     
+            </div>
+          </div>
+
+
+
+
+      <div class="modal slide-up disable-scroll" id="modalLoader" tabindex="-1" role="dialog" aria-hidden="false" style="top: 20% !important;">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content-wrapper">
+                <div class="modal-content">
+                  <div class="modal-body text-center m-t-20">
+                          <!-- START card -->
+                    <div class="row">
+                      <div class="col-md-12 text-center" id="prgSaving" >
+                        <div class="progress-circle-indeterminate m-t-45">
+                        </div>
+                        <br>
+                        <p class="large hint-text">Saving...</p>
+                      </div>
+       
+                      <div class="col-md-12 text-center" id="prgSaved">
+                      
+               
+                        
+                           <h3 class="fa fa-check text-success" style="font-size:50px !important;"  > </h3>
+                    
+                        <br>
+                        <p class="large hint-text">Successfully Saved!</p>
+                      </div>
+
+
+                       <div class="col-md-12 text-center" id="prgFailed">
+                      
+               
+                        
+                         <h1 class="fa fa-times" style="font-size:50px !important; color:  lightgray !important"  > </h1>
+                    
+                        <br>
+                        <p class="large hint-text">Saving Failed!</p>
+                      </div>
+                    </div>
+                <!-- END card -->
+                  
+                  </div>
+                </div>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+          </div>
+
+
+@section styles{ 
+    <style>
+        .modal-backdrop.in {
+            opacity: 0.9 !important;
+        }
+    </style>
+}
+
+@section Scripts{ 
+    <script>
+        var closeModalInfo = false;
+        var companyName = "@CompanyName";
+        var companyId = "@CompanyId";
+
+        
+        $("#navCompanyName").html(companyName);
+        $("#prgSaving").show();
+        $("#prgSaved").hide();
+        $("#prgFailed").hide();
+
+        function ReloadSelect2ModalParent(dropdown, parent) {
+            $(dropdown).select2({
+                dropdownParent: $(parent)
+            });
+        }
+
+
+        $("#modalIntroSmall").modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+
+
+        $("#btnModalIntroContinue").on("click", function () {
+            $("#modalVisitDetail").modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+
+        });
+
+
+
+        $('#CountryId').select2({ dropdownParent: $("#modalVisitDetail") });
+
+        //$("#btnModalSmallContinue").on("click", function () {
+        //    $("#q1BtnToolbar").tooltip({ trigger: 'manual', title: '<label>Please fill in this</label>', html: true, placement: 'left', container: '#formSurvey'});
+
+        //    $('#q1BtnToolbar').on('show.bs.tooltip', function () {
+        //        $(".tooltip").css('transform', 'translateX(310px) translateY(344px)');
+        //    });
+
+        //    $("#q1BtnToolbar").tooltip('show');
+        //});
+
+        $("#btnSubmit,#btnCancel").on("click", function () {
+            closeModalInfo = true;
+            $("#modalVisitDetail").removeClass("fade").modal("hide");
+            $("#modalClientDetails").removeClass("fade").modal("hide");
+        });
+
+        $("#btnNext").on("click", function () {
+            $("#modalVisitDetail").removeClass("fade").modal("hide");
+            $("#modalClientDetails").removeClass("fade").modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        });
+
+        $("#btnBack").on("click", function () {
+            $("#modalClientDetails").removeClass("fade").modal("hide");
+            $("#modalVisitDetail").removeClass("fade").modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        });
+
+        //$(document).on('hide.bs.modal', '#modalVisitDetail', function () {
+        //    if (!closeModalInfo)
+        //    return false;
+        //});
+
+        //$(document).on('hide.bs.modal', '#modalClientDetails', function () {
+        //    if (!closeModalInfo)
+        //    return false;
+        //});
+
+
+
+
+        //////////////  MODAL DROP DOWN DATA /////////////////////
+
+
+
+        // INITIALIZE OUTLET DROPDOWN
+
+
+        $('#CountryId').on('select2:select', function () {
+
+            var countrId = $(this).val();
+            //$('#OutletId').select2({ data: null });
+
+            $('#OutletId').html('').select2('val',null);
+            $('#ManagerId').html('').select2('val', null);
+            $('#StaffId').html('').select2('val', null);
+
+            $.ajax({
+                url: "/Surveys/OutletByCountry?id=" + countrId + "&CompanyId=" + companyId,
+                type: "GET",
+                dataType: 'json',
+                success: function (data) {
+                    $('#OutletId').select2({ data: data, dropdownParent: $("#modalVisitDetail") });
+                    $('#OutletId').val(0).trigger('change');
+                }
+
+            });
+        });
+
+
+
+        // INITIALIZE MANAGERS AND STAFF DROPDOWN
+        $('#OutletId').on('select2:select', function () {
+            var outletId = $(this).val();
+
+            $('#ManagerId').html('').select2('val', null);
+            $('#StaffId').html('').select2('val', null);
+
+            // LOAD MANAGERS
+            $.ajax({
+                url: "/Surveys/ManagersByOutlet?id=" + outletId,
+                type: "GET",
+                dataType: 'json',
+                success: function (data) {
+                    $('#ManagerId').select2({ data: data, dropdownParent: $("#modalVisitDetail") });
+                }
+
+            });
+
+            // LOAD STAFFS
+            $.ajax({
+                url: "/Surveys/StaffsByOutlet?id=" + outletId,
+                type: "GET",
+                dataType: 'json',
+                success: function (data) {
+                    $('#StaffId').select2({ data: data, dropdownParent: $("#modalVisitDetail") });
+                }
+
+            });
+        });
+
+
+        $('#CountryId').val(0).trigger('change');
+
+
+        // ---------- SEND DATA ---------------
+
+        function SaveSurvey() {
+         
+
+            $('#modalLoader').modal('show');
+
+
+            var aLastVisit = ["NEVER", "1 MONTH", "3 MONTHS", "6 MONTHS", "> 6 MONTHS "];
+
+            var jsonSurvey = {
+                'SurveyId': 1,
+                'QualityRate': 0,
+                'QualityComment': '',
+                'ValueRate': 0,
+                'ValueComment': '',
+                'ServiceRate': 0,
+                'ServiceComment': '',
+                'AmbienceRate': 0,
+                'AmbienceComment': '',
+                'RecommendRate': 0,
+                'RecommendPoorArea': '',
+                'RecommendImprovements': '',
+                'RecommendSuggestions': '',
+                'LastVisit': 0,
+                'LastVisitComment': '',
+                'Action': '',
+                'Status': '',
+                //'DateTime' : '',
+                'Customer': '',
+                'MobileNo': '',
+                'Email': '',
+                'CheckNo': '',
+                'TableNo': '',
+                'OutletId': 0,
+                'ManagerId': 0,
+                'StaffId': 0,
+            }
+
+            jsonSurvey.Action = '1';
+            jsonSurvey.Status = 'Unresolved';
+            //jsonSurvey.DateTime = '';
+            jsonSurvey.Customer = document.getElementById("txtFirstName").value + " " + document.getElementById("txtLastName").value;
+            jsonSurvey.MobileNo = document.getElementById("txtMobile").value;
+            jsonSurvey.Email = document.getElementById("txtEmail").value;
+            jsonSurvey.CheckNo = document.getElementById("txtCheckNo").value;
+            jsonSurvey.TableNo = document.getElementById("txtTableNo").value;
+            jsonSurvey.OutletId = $("#OutletId").val();
+            jsonSurvey.ManagerId = $("#ManagerId").val();
+            jsonSurvey.StaffId = $("#StaffId").val();
+
+
+            jsonSurvey.Action = '';
+            jsonSurvey.SurveyId = 0;
+            jsonSurvey.QualityRate = parseInt($($(".field")[1]).find(".btn.btn-default.active").text());
+            jsonSurvey.QualityComment = $("#QualityComment").val();
+            jsonSurvey.ValueRate = parseInt($($(".field")[0]).find(".btn.btn-default.active").text());
+            jsonSurvey.ValueComment = $("#ValueComment").val();
+            jsonSurvey.ServiceRate = parseInt($($(".field")[2]).find(".btn.btn-default.active").text());
+            jsonSurvey.ServiceComment = $("#ServiceComment").val();
+            jsonSurvey.AmbienceRate = parseInt($($(".field")[3]).find(".btn.btn-default.active").text());
+            jsonSurvey.AmbienceComment = $("#AmbienceComment").val();
+            jsonSurvey.RecommendRate = parseInt($($(".field")[5]).find(".btn.btn-default.active").text());
+            jsonSurvey.RecommendPoorArea = $("#RecommendPoorArea").val();
+            jsonSurvey.RecommendImprovements = $("#RecommendImprovements").val();
+            jsonSurvey.RecommendSuggestions = $("#RecommendSuggestions").val();
+            jsonSurvey.LastVisit = $.inArray($($("#btnLastVisit").find(".active").find("span")[1]).text(), aLastVisit);
+            jsonSurvey.LastVisitComment = $("#LastVisitComment").val();
+
+
+            $.ajax({
+                url: '/Surveys/Create',
+                type: "POST",
+                dataType: 'json',
+                contentType: "application/json",
+                async: true,
+
+                data: JSON.stringify(jsonSurvey),
+
+                success: function (data) {
+                    $("#prgSaving").hide();
+                    $("#prgSaved").show();
+                    $("#prgFailed").hide();
+
+                    setTimeout(function () {
+                        window.location.href = "/Surveys/Complete";
+                    }, 3000);
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    $("#prgSaving").hide();
+                    $("#prgSaved").hide();
+                    $("#prgFailed").show();
+
+                }
+
+
+            });
+
+        }
+
+
+
+
+        // ---------- SEND DATA END HERE ------
+
+        $("#btnModalSmallContinue").on("click", function () {
+            SaveSurvey();
+        });
+
+
+
+
+
+    </script>
+       <script src="~/js/Survey.js"></script>
+
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+

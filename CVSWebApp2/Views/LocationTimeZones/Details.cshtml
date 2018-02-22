@@ -1,0 +1,30 @@
+﻿@model CVSWebApp2.Models.LocationTimeZone
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LocationTimeZone</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeZoneValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TimeZoneValue)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.LocationTimeZoneId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

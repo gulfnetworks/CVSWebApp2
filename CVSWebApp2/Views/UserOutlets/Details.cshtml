@@ -1,0 +1,36 @@
+﻿@model CVSWebApp2.Models.UserOutlet
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserOutlet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DefaultOutlet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DefaultOutlet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Outlet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Outlet.OutletId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.UserOutletId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,47 @@
+﻿@model CVSWebApp2.Models.UserOutlet
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>UserOutlet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label><br />
+                <input asp-for="Id"  />
+            </div>
+
+
+          <div class="form-group">
+                <label asp-for="OutletId" class="control-label"></label><br />
+                        <input asp-for="OutletId"/>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="DefaultOutlet" /> @Html.DisplayNameFor(model => model.DefaultOutlet)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

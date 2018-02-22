@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CVSWebApp2.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Companies</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+   <div class="table-responsive">
+                      <table class="table table-hover table-condensed  table-striped">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyContact)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyCode)
+                </th>
+        
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.CompanyAddress)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.CompanyContact)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => item.CompanyCode)
+            </td>
+  
+            <td>
+                @Html.DisplayFor(modelItem => item.Country.Description)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CompanyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CompanyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CompanyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+       </div>
