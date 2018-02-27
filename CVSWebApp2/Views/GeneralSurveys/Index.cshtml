@@ -2,245 +2,479 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutFullScreen.cshtml";
 }
 
-<h2>Index</h2>
+<h5>General Survey Report</h5>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
+  
+
+                    <div class="table-responsive" style="width:100%" >
+     
+
+
+          
+		<table id="example" class="display responsive nowrap table-condensed table-bordered table-detailed"    cellspacing="0" width="100% !important;">
+
+
+          <thead>
+
+                                   <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.SurveyId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Action)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AmbienceComment)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AmbienceRate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CheckNo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Customer)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.DateTime)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.Customer)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastVisit)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastVisitComment)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ManagerId)
-                </th>
-                <th>
+            <th >
                     @Html.DisplayNameFor(model => model.MobileNo)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.OutletId)
+                    @Html.DisplayNameFor(model => model.Email)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.QualityComment)
+                <th >
+                    @Html.DisplayNameFor(model => model.CheckNo)
                 </th>
+            
+
+        <th>
+                    @Html.DisplayNameFor(model => model.ManagerFirstName)
+                </th>
+                                                   <th>
+                    @Html.DisplayNameFor(model => model.MemberFirstName)
+                </th>
+                                                                                  <th>
+                    @Html.DisplayNameFor(model => model.OutletName)
+                </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.ValueRate)
+                </th>
+                                       
                 <th>
                     @Html.DisplayNameFor(model => model.QualityRate)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RecommendImprovements)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RecommendPoorArea)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RecommendRate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RecommendSuggestions)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ServiceComment)
-                </th>
-                <th>
+                                              <th>
                     @Html.DisplayNameFor(model => model.ServiceRate)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.StaffId)
+                <th >
+                    @Html.DisplayNameFor(model => model.AmbienceRate)
                 </th>
+      
+      
+     
                 <th>
-                    @Html.DisplayNameFor(model => model.Status)
+                    @Html.DisplayNameFor(model => model.Average)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TableNo)
+       
+                <th  >
+                    @Html.DisplayNameFor(model => model.RecommendRate)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ValueComment)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ValueRate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CompanyId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CountryId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.OutletAddress)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.OutletName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email2)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FirstName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ResolutionLogId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ApplicationUserId)
-                </th>
+ 
                 <th>
                     @Html.DisplayNameFor(model => model.Status2)
                 </th>
-            <th></th>
+   
+            <th>
+                    @Html.DisplayNameFor(model => model.TableNo)
+                </th>
+ 
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
+
+
+
+                          @*<tr>
+                            <th style="width:25%">Title</th>
+                            <th style="width:25%">Status</th>
+                            <th style="width:25%">Price</th>
+                            <th style="width:25%">Last Update</th>
+                          </tr>*@
+                        </thead>
+                        <tbody>
+                     @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.SurveyId)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Action)
+                  <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AmbienceComment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AmbienceRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CheckNo)
-            </td>
-            <td>
+                     <td>
                 @Html.DisplayFor(modelItem => item.Customer)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTime)
+                <td>
+                @Html.DisplayFor(modelItem => item.MobileNo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastVisit)
+
+                     <td>
+                @Html.DisplayFor(modelItem => item.CheckNo)
+            </td>
+                     <td>
+                @Html.DisplayFor(modelItem => item.ManagerFirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastVisitComment)
+                @Html.DisplayFor(modelItem => item.MemberFirstName)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ManagerId)
+             <td>
+                @Html.DisplayFor(modelItem => item.OutletName)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MobileNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OutletId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QualityComment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QualityRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RecommendImprovements)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RecommendPoorArea)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RecommendRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RecommendSuggestions)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ServiceComment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ServiceRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StaffId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TableNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValueComment)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.ValueRate)
             </td>
+            
             <td>
-                @Html.DisplayFor(modelItem => item.CompanyId)
+                @Html.DisplayFor(modelItem => item.QualityRate)
+            </td>
+                     <td>
+                @Html.DisplayFor(modelItem => item.ServiceRate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CountryId)
+                @Html.DisplayFor(modelItem => item.AmbienceRate)
             </td>
+   
+                      <td>
+                @Html.DisplayFor(modelItem => item.Average)
+            </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.OutletAddress)
+                @Html.DisplayFor(modelItem => item.RecommendRate)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OutletName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ResolutionLogId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApplicationUserId)
-            </td>
+
+
+  
+   
             <td>
                 @Html.DisplayFor(modelItem => item.Status2)
             </td>
+          
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                @Html.DisplayFor(modelItem => item.TableNo)
+
+
+
+
             </td>
         </tr>
 }
-    </tbody>
-</table>
+                        </tbody>
+                      </table>
+
+
+                    </div>
+
+          <!-- END CONTAINER FLUID -->
+@section Scripts{ 
+     @*<script src="~/assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/jquery-datatable/media/js/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/datatables-responsive/js/lodash.min.js"></script>
+<script src="~/js/UsersDataTablejs.js"></script>*@
+
+    @*<script src="~/lib/datatable-responsive/js/jquery-1.12.4.js"></script>*@
+ <script src="~/lib/datatable-responsive/js/jquery.dataTables.min.js"></script>
+
+<script src="~/lib/datatable-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/lib/datatable-responsive/js/dataTables.select.min.js"></script>
+   
+<script src="~/lib/datatable-responsive/js/jquery-ui.min.js"></script>
+<script src="~/lib/datatable-responsive/js/jquery.ui-contextmenu.min.js"></script>
+       <script>
+
+
+           //$(document).ready(function () {
+           //    $('#gsTable').DataTable({
+           //                       "sScrollX": "100%",
+           //    "sScrollXInner": "100%",
+      
+           //        "scrollX": true,
+           //        "bScrollCollapse": true,
+           //        "paging": true
+           //    });
+           //});
+           //var oTable2 = $('#detailedTable1').dataTable({
+           //    responsive: true,
+           //    "sScrollX": "100%",
+           //    "bScrollCollapse": true
+           //});
+
+
+        //   $("#gsTable").dataTable({ "scrollX": true });
+
+        //       $(document).resize(function () {
+      
+        //    $("#gsTable").dataTable().fnAdjustColumnSizing();
+        //});
+           //var editor; // use a global for the submit and return data rendering in the examples
+
+           //$(document).ready(function () {
+
+           //    $('#example').DataTable({
+
+           //        dom: "Bfrtip",
+           //        select: true,
+           //        "pageLength": 20
+   
+           //    });
+           //});
+
+
+
+
+
+
+           $(document).ready(function () {
+               var oTable = $('#example').dataTable({
+                   "bJQueryUI": true,
+                   "sDom": 'l<"H"Rf>t<"F"ip>',
+                   "bAutoWidth": false
+                   
+               });
+
+               oTable.on('length.dt', function (e, settings, len) {
+                   oTable.css({ width: oTable.parent().width() });
+
+                   if (oTable != "") {
+                       oTable.fnAdjustColumnSizing(); //oTable is the variable which holds DataTable
+
+                   }
+
+               });
+
+               oTable.on('draw.dt', function (e) {
+
+               
+                   $('#example').DataTable()
+                       .columns.adjust()
+                       .responsive.recalc();
+                   
+        
+               });
+
+      
+
+               $(document).contextmenu({
+                   delegate: ".dataTable td",
+                   menu: [
+                       { title: "<a href='#'>View Details</a>", cmd: "filter", uiIcon: "" },
+                       { title: "Update Status", cmd: "nofilter", uiIcon: "" },
+                       { title: "Send Email", cmd: "nofilter", uiIcon: "" },
+                          { title: "Send Promotion", cmd: "nofilter", uiIcon: "" }
+                   ],
+                   select: function (event, ui) {
+                       var coltext = ui.target.text();
+                       var colvindex = ui.target.parent().children().index(ui.target);
+                       var colindex = $('table thead tr th:eq(' + colvindex + ')').data('column-index');
+                       switch (ui.cmd) {
+                           case "filter":
+                                alert(1);
+                               break;
+                           case "nofilter":
+                               alert(2);
+                               break;
+                       }
+                   },
+                   beforeOpen: function (event, ui) {
+                       var $menu = ui.menu,
+                           $target = ui.target,
+                           extraData = ui.extraData;
+                       ui.menu.zIndex(9999);
+                   }
+               });
+          
+         
+           });
+
+
+   
+      
+
+           </script>
+
+}
+
+@section Styles{ 
+
+<link href="~/lib/datatable-responsive/css/select.dataTables.min.css" rel="stylesheet" />
+<link href="~/lib/datatable-responsive/css/buttons.dataTables.min.css" rel="stylesheet" />
+@*<link href="~/lib/datatable-responsive/css/editor.dataTables.min.css" rel="stylesheet" />*@
+<link href="~/lib/datatable-responsive/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+        <link href="~/assets/plugins/jquery-datatable/media/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
+ <style>
+     .sorting_desc:after, .sorting:after, .sorting_asc:after {
+         content: "" !important;
+     }
+
+
+     thead tr th,  tbody tr td,  tbody tr td *:not(.dropdown-default) {
+         /*white-space: nowrap !important;*/
+         vertical-align: middle !important;
+         overflow: hidden;
+         text-overflow: ellipsis;
+     }
+
+      tbody tr td {
+         padding-top: 12px !important;
+         padding-bottom: 12px !important;
+     }
+     .table-responsive{
+         border-right: 1px solid #eceeef !important;
+         padding:0px !important;
+     }
+
+
+     table {
+          margin-top: 0px !important;
+       
+     }
+     .dataTables_scrollBody table {
+         margin-left: 0px;
+         margin-right: 2px;
+     }
+     input, input:focus {
+          border: 1px solid #eceeef; 
+     }
+
+     table.dataTable thead th, table.dataTable thead td {
+         padding: 10px 18px;
+         border-bottom: 1px solid #e6e6e6 !important;
+     }
+
+     #example {
+         font-size: 12px !important;
+         border-right: 1px  !important;
+     }
+     table.dataTable.no-footer {
+         border: 1px solid #eceeef !important;
+     }
+     /* An ugly trick to use a filter icon */
+     .ui-icon-volume-off.ui-icon-filter {
+         -ms-transform: rotate(270deg);
+         -webkit-transform: rotate(270deg);
+         transform: rotate(270deg);
+     }
+
+     #ui-id-1 {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         z-index: 1000;
+         display: none;
+         float: left;
+         min-width: 10rem;
+         padding: .5rem 0;
+         margin: .125rem 0 0;
+         font-size: 1rem;
+         color: #292b2c;
+         text-align: left;
+         list-style: none;
+         background-color: #fff;
+         -webkit-background-clip: padding-box;
+         background-clip: padding-box;
+         border: 1px solid rgba(0,0,0,.15);
+         border-radius: .25rem;
+     }
+     .ui-menu-item {
+         padding-left: 0px;
+         line-height: 35px;
+         color: #575a5d;
+         padding: 0 20px;
+         border-radius: 3px;
+         display: block;
+         clear: both;
+         white-space: nowrap;
+         text-align: left;
+     }
+
+    .ui-menu-item:hover, .ui-menu-item:focus {
+        color: #18191a;
+        text-decoration: none;
+    }
+
+    .ui-menu-item:hover {
+        opacity: 1;
+    }
+
+    .ui-menu-item:focus, .ui-menu-item:hover {
+        color: #1d1e1f;
+        text-decoration: none;
+        background-color: #f7f7f9;
+    }
+
+     .container{
+         width: 100% !important;
+     }
+
+     .table-responsive {
+         border: 0px !important; 
+
+     }
+
+     .table-bordered {
+         border-top: 0px  !important; 
+     }
+
+     table.dataTable.no-footer {
+         border-top: 0px !important;
+         border-right: 0px !important;
+     }
+
+     .table-responsive {
+         overflow-x: hidden !important;
+         margin-bottom: 20px !important;
+     }
+
+
+     .dataTables_paginate > span > a, .dataTables_paginate  > a {
+         background: none !important;
+     }
+
+
+     .dataTables_paginate > span > a {
+         display: inline-block !important;
+     }
+
+     .dataTables_paginate > span > a {
+         color: black !important;
+   
+         padding: 8px 16px !important;
+         text-decoration: none !important;
+     }
+
+         .dataTables_paginate > span > a.current {
+             background-color: #eee !important;
+             color: white !important;
+         }
+
+     .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+     .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+         border: 1px solid #e7e7e7 !important;
+     }
+     .dataTables_wrapper .dataTables_paginate .paginate_button {
+         color: #575a5d !important;
+         font-size: 12px !important;
+     }
+         .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+             color: black !important;
+         }
+
+     #ui-id-1{
+         font-size: 12px !important;
+     }
+    </style>
+}
+
+

@@ -10,3 +10,14 @@ C:\Users\gnetwork\source\repos\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVS
 C:\Users\gnetwork\source\repos\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.pdb
 C:\Users\gnetwork\source\repos\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\gnetwork\source\repos\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.csprojResolveAssemblyReference.cache
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\bin\Debug\netcoreapp2.0\CVSWebApp2.deps.json
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\bin\Debug\netcoreapp2.0\CVSWebApp2.runtimeconfig.json
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\bin\Debug\netcoreapp2.0\CVSWebApp2.runtimeconfig.dev.json
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\bin\Debug\netcoreapp2.0\CVSWebApp2.dll
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\bin\Debug\netcoreapp2.0\CVSWebApp2.pdb
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.csproj.CoreCompileInputs.cache
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.AssemblyInfoInputs.cache
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.AssemblyInfo.cs
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.dll
+D:\GITHUB\REPOSITORIES\CVSWebApp2\CVSWebApp2\obj\Debug\netcoreapp2.0\CVSWebApp2.pdb

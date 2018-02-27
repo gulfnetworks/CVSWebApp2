@@ -39,4 +39,51 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\datatable-responsive\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\footable\.csslintrc" />
+    <None Include="wwwroot\lib\footable\.gitattributes" />
+    <None Include="wwwroot\lib\footable\.jshintrc" />
+    <None Include="wwwroot\lib\footable\.travis.yml" />
+    <None Include="wwwroot\lib\footable\css\fonts\footable.svg" />
+    <None Include="wwwroot\lib\footable\demos\fonts\glyphiconshalflings-regular.svg" />
+    <None Include="wwwroot\lib\footable\demos\js\bootstrap-tab.js" />
+    <None Include="wwwroot\lib\footable\demos\js\bootstrapSwitch.js" />
+    <None Include="wwwroot\lib\footable\demos\js\data-generator.js" />
+    <None Include="wwwroot\lib\footable\demos\js\demos.js" />
+    <None Include="wwwroot\lib\footable\demos\js\jquery-1.9.1.min.js" />
+    <None Include="wwwroot\lib\footable\demos\js\jquery.mockjax.js" />
+    <None Include="wwwroot\lib\footable\demos\js\mustache.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.all.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.bookmarkable.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.filter.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.grid.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.paginate.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.sort.min.js" />
+    <None Include="wwwroot\lib\footable\dist\footable.striping.min.js" />
+    <None Include="wwwroot\lib\footable\Gruntfile.js" />
+    <None Include="wwwroot\lib\footable\js\.jshintrc" />
+    <None Include="wwwroot\lib\footable\js\footable.bookmarkable.js" />
+    <None Include="wwwroot\lib\footable\js\footable.filter.js" />
+    <None Include="wwwroot\lib\footable\js\footable.grid.js" />
+    <None Include="wwwroot\lib\footable\js\footable.js" />
+    <None Include="wwwroot\lib\footable\js\footable.memory.js" />
+    <None Include="wwwroot\lib\footable\js\footable.paginate.js" />
+    <None Include="wwwroot\lib\footable\js\footable.plugin.template.js" />
+    <None Include="wwwroot\lib\footable\js\footable.sort.js" />
+    <None Include="wwwroot\lib\footable\js\footable.striping.js" />
+    <None Include="wwwroot\lib\footable\latest\js\footable.js" />
+    <None Include="wwwroot\lib\footable\latest\js\footable.min.js" />
+    <None Include="wwwroot\lib\footable\less\footable.core.less" />
+    <None Include="wwwroot\lib\footable\less\footable.metro.less" />
+    <None Include="wwwroot\lib\footable\less\footable.standalone.less" />
+    <None Include="wwwroot\lib\footable\LICENSE" />
+    <None Include="wwwroot\lib\footable\README.md" />
+    <None Include="wwwroot\lib\footable\screenshot.pdn" />
+  </ItemGroup>
+
 </Project>

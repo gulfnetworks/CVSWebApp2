@@ -1,9 +1,4 @@
-﻿/* ============================================================
- * Tables
- * Generate advanced tables with sorting, export options using
- * jQuery DataTables plugin
- * For DEMO purposes only. Extract what you need.
- * ============================================================ */
+﻿
 (function ($) {
 
     'use strict';
@@ -32,7 +27,7 @@
         table.DataTable({
             "sDom": "t",
             "scrollCollapse": true,
-            "paging": false,
+            "paging": true,
             "bSort": false
         });
 
